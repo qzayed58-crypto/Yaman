@@ -43,6 +43,31 @@ test("the root path serves the same index file as Vercel's default static hostin
   assert.equal(resolveRewrite("/"), "/index.html");
 });
 
+test("conversation data satisfies the runtime integrity checks", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const html = await readFile(new URL("../../public/index.html", import.meta.url), "utf8");
+  const match = html.match(/<script type="application\/json" id="cue-conversations-data-v1">([\s\S]*?)<\/script>/);
+  assert.ok(match, "conversation data block exists");
+  const conversations = JSON.parse(match[1]);
+  const expectedMessages = { A1: 16, A2: 20, B1: 24, B2: 30, C1: 36, C2: 40 };
+  assert.equal(conversations.length, Object.keys(expectedMessages).length * 25);
+
+  for (const [level, count] of Object.entries(expectedMessages)) {
+    const items = conversations.filter((item) => item.level === level);
+    assert.equal(items.length, 25, `${level} conversation count`);
+    for (const item of items) {
+      const id = `${level}-${String(item.number).padStart(2, "0")}`;
+      assert.equal(item.messages?.length, count, `${id} message count`);
+      assert.equal(item.speakers?.length, 2, `${id} speaker list`);
+      for (const [index, message] of item.messages.entries()) {
+        assert.equal(message.speaker, item.speakers[index % 2], `${id} message ${index + 1} speaker`);
+        assert.ok(message.english?.trim(), `${id} message ${index + 1} English text`);
+        assert.ok(message.arabic?.trim(), `${id} message ${index + 1} Arabic text`);
+      }
+    }
+  }
+});
+
 test("rewrites preserve the original query string", async () => {
   let forwardedRequest;
   const request = new Request("https://example.test/read?level=1&from=home");
