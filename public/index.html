@@ -88150,8 +88150,24 @@ showHub();
         if (!response.ok) throw new Error('Courses source HTTP ' + response.status);
         return response.text();
     })();
-    coursesSourceReady.then(html => { coursesFrame.srcdoc = html; })
-        .catch(error => console.error('Courses content could not be prepared', error));
+    coursesSourceReady.then(html => {
+        const bodyStart = html.indexOf('<div class="wrap"');
+        if (bodyStart < 0) throw new Error('Invalid Courses source');
+        const headMarkup = html.slice(0, bodyStart);
+        const bodyMarkup = html.slice(bodyStart);
+        coursesFrame.addEventListener('load', () => {
+            const doc = coursesFrame.contentDocument;
+            if (!doc || doc.__cueCoursesHashNav) return;
+            doc.__cueCoursesHashNav = true;
+            doc.addEventListener('click', event => {
+                const link = event.target.closest('a[href^="#"]');
+                if (!link) return;
+                event.preventDefault();
+                coursesFrame.contentWindow.location.hash = link.getAttribute('href');
+            }, true);
+        });
+        coursesFrame.srcdoc = '<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">' + headMarkup + '</head><body>' + bodyMarkup + '</body></html>';
+    }).catch(error => console.error('Courses content could not be prepared', error));
     let pronLoaded = false;
     const loadPron = () => {
         if (pronLoaded) return;
