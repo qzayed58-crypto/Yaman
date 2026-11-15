@@ -1,0 +1,4 @@
+# Generated during Cloudflare Workers Builds
+/cloudflare/rewrites.generated.json
+/wrangler.generated.jsonc
+/.wrangler/

@@ -1,0 +1,75 @@
+import assert from "node:assert/strict";
+import { test } from "node:test";
+import rewrites from "../rewrites.generated.json" with { type: "json" };
+import worker, { resolveRewrite } from "../worker.mjs";
+
+function sampleSource(source) {
+  return source
+    .replace(/:([A-Za-z][A-Za-z0-9_]*)\*/g, "sample/nested")
+    .replace(/:([A-Za-z][A-Za-z0-9_]*)/g, "sample");
+}
+
+test("Cloudflare rewrite table is generated from every Vercel rewrite", () => {
+  assert.equal(rewrites.length, 47);
+  for (const rule of rewrites) {
+    assert.equal(resolveRewrite(sampleSource(rule.source)), rule.destination, rule.source);
+  }
+});
+
+test("key Vercel routes resolve to the same static files", () => {
+  const cases = [
+    ["/stories.html", "/stories/index.html"],
+    ["/stories", "/stories/index.html"],
+    ["/B1_level3", "/B1_level3/index.html"],
+    ["/grammar-level6", "/grammar-level6/index.html"],
+    ["/read", "/read/index.html"],
+    ["/read/", "/read/index.html"],
+    ["/arabic-academy", "/arabic-academy/index.html"],
+    ["/arabic-academy/curriculum/b1/chapter-1/2", "/arabic-academy/index.html"],
+    ["/arabic-academy/guide/sentence-parsing/b1/group-2", "/arabic-academy/index.html"],
+    ["/arabic-academy/rhetoric/applications/branch/quran-rhetoric/lesson/3", "/arabic-academy/index.html"],
+  ];
+
+  for (const [pathname, destination] of cases) {
+    assert.equal(resolveRewrite(pathname), destination, pathname);
+  }
+});
+
+test("unmatched paths are not rewritten", () => {
+  assert.equal(resolveRewrite("/read/not-a-vercel-route"), null);
+});
+
+test("the root path serves the same index file as Vercel's default static hosting", () => {
+  assert.equal(resolveRewrite("/"), "/index.html");
+});
+
+test("rewrites preserve the original query string", async () => {
+  let forwardedRequest;
+  const request = new Request("https://example.test/read?level=1&from=home");
+  const response = await worker.fetch(request, {
+    ASSETS: {
+      fetch: async (rewrittenRequest) => {
+        forwardedRequest = rewrittenRequest;
+        return new Response("ok");
+      },
+    },
+  });
+
+  assert.equal(response.status, 200);
+  assert.equal(forwardedRequest.url, "https://example.test/read/index.html?level=1&from=home");
+});
+
+test("unmatched asset requests are passed to Cloudflare static assets unchanged", async () => {
+  const request = new Request("https://example.test/robots.txt");
+  let forwardedRequest;
+  await worker.fetch(request, {
+    ASSETS: {
+      fetch: async (assetRequest) => {
+        forwardedRequest = assetRequest;
+        return new Response("ok");
+      },
+    },
+  });
+
+  assert.equal(forwardedRequest, request);
+});

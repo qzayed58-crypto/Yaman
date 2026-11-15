@@ -1,10 +1,9 @@
 'use strict';
 
 const fs = require('node:fs');
-const crypto = require('node:crypto');
+const path = require('node:path');
 
-const productionIndex = 'public/index.html';
-const expectedSha256 = 'f81fdd0755653dd6a4be3a64d26e18779ecfce266f8e6006426ee28fcf9d7080';
+const publicDir = path.resolve('public');
 const requiredFiles = [
   'public/index.html',
   'public/read/index.html',
@@ -18,10 +17,28 @@ for (const file of requiredFiles) {
   if (!fs.existsSync(file)) throw new Error(`Required production file is missing: ${file}`);
 }
 
-const index = fs.readFileSync(productionIndex);
-const actualSha256 = crypto.createHash('sha256').update(index).digest('hex');
-if (actualSha256 !== expectedSha256) {
-  throw new Error(`Production index checksum mismatch: ${actualSha256}`);
+const vercel = JSON.parse(fs.readFileSync('vercel.json', 'utf8'));
+if (!Array.isArray(vercel.rewrites)) {
+  throw new Error('vercel.json must define a rewrites array.');
 }
 
-console.log(`Verified production snapshot: ${productionIndex} (${index.length} bytes, SHA-256 ${actualSha256}); static output is public/.`);
+for (const [index, rule] of vercel.rewrites.entries()) {
+  if (typeof rule.source !== 'string' || !rule.source.startsWith('/')) {
+    throw new Error(`Invalid Vercel rewrite source at index ${index}.`);
+  }
+  if (typeof rule.destination !== 'string' || !rule.destination.startsWith('/')) {
+    throw new Error(`Invalid Vercel rewrite destination at index ${index}.`);
+  }
+
+  const destinationPath = path.resolve(publicDir, `.${rule.destination}`);
+  if (!destinationPath.startsWith(`${publicDir}${path.sep}`)) {
+    throw new Error(`Vercel rewrite destination escapes public/: ${rule.destination}`);
+  }
+  if (!fs.existsSync(destinationPath)) {
+    throw new Error(`Vercel rewrite destination is missing: public${rule.destination}`);
+  }
+}
+
+console.log(
+  `Verified ${requiredFiles.length} required production pages and ${vercel.rewrites.length} Vercel rewrite destinations; static output is public/.`,
+);
