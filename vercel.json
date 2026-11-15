@@ -13,6 +13,14 @@
       "destination": "/stories/index.html"
     },
     {
+      "source": "/courses",
+      "destination": "/courses/index.html"
+    },
+    {
+      "source": "/courses/",
+      "destination": "/courses/index.html"
+    },
+    {
       "source": "/B1_level3",
       "destination": "/B1_level3/index.html"
     },

@@ -10,7 +10,7 @@ function sampleSource(source) {
 }
 
 test("Cloudflare rewrite table is generated from every Vercel rewrite", () => {
-  assert.equal(rewrites.length, 48);
+  assert.equal(rewrites.length, 50);
   for (const rule of rewrites) {
     assert.equal(resolveRewrite(sampleSource(rule.source)), rule.destination, rule.source);
   }
@@ -21,6 +21,8 @@ test("key Vercel routes resolve to the same static files", () => {
     ["/stories.html", "/stories/index.html"],
     ["/stories", "/stories/index.html"],
     ["/stories/", "/stories/index.html"],
+    ["/courses", "/courses/index.html"],
+    ["/courses/", "/courses/index.html"],
     ["/B1_level3", "/B1_level3/index.html"],
     ["/grammar-level6", "/grammar-level6/index.html"],
     ["/read", "/read/index.html"],
