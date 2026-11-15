@@ -9,6 +9,10 @@
       "destination": "/stories/index.html"
     },
     {
+      "source": "/stories/",
+      "destination": "/stories/index.html"
+    },
+    {
       "source": "/B1_level3",
       "destination": "/B1_level3/index.html"
     },
