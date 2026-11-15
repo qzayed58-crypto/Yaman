@@ -1,0 +1,951 @@
+{
+  "version": 10,
+  "portalTitle": "كتاب الكامل للمبرّد",
+  "bookTitle": "الكامل في اللغة والأدب",
+  "author": "أبو العباس محمد بن يزيد المبرّد",
+  "edition": "تحقيق محمد أبو الفضل إبراهيم، الطبعة الثالثة، 1417هـ/1997م",
+  "sourceBookUrl": "https://shamela.ws/book/8505",
+  "sourceNotice": "يُعرض المتن كاملاً من المصدر في نطاق كل قسم متاح، لا ملخصاً بديلاً عنه. تُرتّب الفروع للقراءة فقط، ويظهر رابط موضع كل صفحة بجانبها.",
+  "diacritizationNotice": "حُوفظ على الحركات الواردة في المصدر، ولم تُضف حركات آلية إلا عند تطابق النص حرفياً. المواضع التي لم تمرّ من هذا التحقق بقيت على نص المصدر من غير تخمين.",
+  "sections": [
+    {
+      "id": "section-one",
+      "number": 1,
+      "title": "بدايات المجلد الأول",
+      "range": "ص 7–106",
+      "status": "available",
+      "description": "المئة صفحة الأولى من المتن، مرتبة في فروعها الأصلية.",
+      "volume": 1
+    },
+    {
+      "id": "section-two",
+      "number": 2,
+      "title": "تتمة المجلد الأول",
+      "range": "ص 107–206",
+      "status": "available",
+      "description": "المئة صفحة التالية من المتن، مرتبة في فروعها بحسب تسلسل المصدر.",
+      "volume": 1
+    },
+    {
+      "id": "section-three",
+      "number": 3,
+      "title": "خاتمة المجلد الأول",
+      "range": "ص 207–306",
+      "status": "available",
+      "description": "المئة صفحة التالية من المتن، مرتبة في فروعها بحسب تسلسل المصدر.",
+      "volume": 1
+    },
+    {
+      "id": "section-four",
+      "number": 4,
+      "title": "بداية المجلد الثاني",
+      "range": "المجلد الثاني: ص 3–102",
+      "status": "available",
+      "volume": 2,
+      "description": "أول مئة صفحة متاحة من المجلد الثاني، مرتبة في فروعها بحسب تسلسل المصدر."
+    },
+    {
+      "id": "section-five",
+      "number": 5,
+      "title": "تتمة المجلد الثاني",
+      "range": "المجلد الثاني: ص 103–202",
+      "status": "available",
+      "volume": 2,
+      "description": "مئة صفحة تالية من المجلد الثاني، مرتبة في فروعها بحسب تسلسل المصدر."
+    },
+    {
+      "id": "section-six",
+      "number": 6,
+      "title": "ختام المجلد الثاني وبداية الثالث",
+      "range": "المجلد الثاني: ص 203–233؛ المجلد الثالث: ص 3–71",
+      "status": "available",
+      "description": "مئة صفحة تالية متصلة: ختام المجلد الثاني ثم بداية المجلد الثالث، مرتبة في فروعها بحسب تسلسل المصدر."
+    },
+    {
+      "id": "section-seven",
+      "number": 7,
+      "title": "تتمة المجلد الثالث",
+      "range": "المجلد الثالث: ص 72–171",
+      "status": "available",
+      "volume": 3,
+      "description": "مئة صفحة تالية من المجلد الثالث، مرتبة في فروع دقيقة بحسب تسلسل المصدر."
+    },
+    {
+      "id": "section-eight",
+      "number": 8,
+      "title": "تتمة المجلد الثالث",
+      "range": "المجلد الثالث: ص 172–271",
+      "status": "available",
+      "volume": 3,
+      "description": "مئة صفحة تالية من المجلد الثالث، مرتبة في فروع دقيقة بحسب تسلسل المصدر."
+    },
+    {
+      "id": "section-nine",
+      "number": 9,
+      "title": "ختام المجلد الثالث وبداية المجلد الرابع",
+      "range": "المجلد الثالث: ص 272–293؛ المجلد الرابع: ص 3–80",
+      "status": "available",
+      "volume": 3,
+      "description": "مئة صفحة مطبوعة عابرة لنهاية المجلد الثالث وبداية المجلد الرابع، مرتبة في فروع دقيقة بحسب تسلسل المصدر."
+    },
+    {
+      "id": "section-ten",
+      "number": 10,
+      "title": "خاتمة الكتاب: الرسائل والمجاز",
+      "range": "المجلد الرابع: ص 81–105",
+      "status": "available",
+      "volume": 4,
+      "description": "خاتمة الكتاب الكاملة من المراثي والأذواء والخطب والرسائل والشعر والمجاز، مرتبة في فروع دقيقة بحسب تسلسل المصدر."
+    }
+  ],
+  "branches": [
+    {
+      "id": "prophetic-and-oratory",
+      "title": "النصوص النبوية والخطب والرسائل",
+      "pages": [
+        7,
+        26
+      ],
+      "accent": "red",
+      "sectionId": "section-one"
+    },
+    {
+      "id": "eloquence-and-evidence",
+      "title": "فصاحة الألفاظ وأمثلة البيان",
+      "pages": [
+        27,
+        42
+      ],
+      "accent": "gold",
+      "sectionId": "section-one"
+    },
+    {
+      "id": "wisdom-pride-satire",
+      "title": "أقوال الحكماء وشواهد الفخر والهجاء",
+      "pages": [
+        43,
+        56
+      ],
+      "accent": "emerald",
+      "sectionId": "section-one"
+    },
+    {
+      "id": "elegy-and-love",
+      "title": "الحِكَم والرثاء والنسيب",
+      "pages": [
+        57,
+        66
+      ],
+      "accent": "blue",
+      "sectionId": "section-one"
+    },
+    {
+      "id": "praise-description-elegy",
+      "title": "المدح والوصف والرثاء",
+      "pages": [
+        67,
+        83
+      ],
+      "accent": "violet",
+      "sectionId": "section-one"
+    },
+    {
+      "id": "ethics-sermons-answers",
+      "title": "مكارم الأخلاق والوعظ والجواب",
+      "pages": [
+        84,
+        98
+      ],
+      "accent": "rose",
+      "sectionId": "section-one"
+    },
+    {
+      "id": "hasan-and-farazdaq",
+      "title": "الحسن البصري والفرزدق والشعر",
+      "pages": [
+        99,
+        106
+      ],
+      "accent": "amber",
+      "sectionId": "section-one"
+    },
+    {
+      "id": "s2-wisdom-and-praise",
+      "sectionId": "section-two",
+      "title": "الحِكَم والمدح وقلة النوم",
+      "pages": [
+        107,
+        114
+      ],
+      "accent": "red"
+    },
+    {
+      "id": "s2-sayings-and-wealth",
+      "sectionId": "section-two",
+      "title": "الأخبار والأقوال والمال",
+      "pages": [
+        115,
+        123
+      ],
+      "accent": "gold"
+    },
+    {
+      "id": "s2-asceticism-and-guidance",
+      "sectionId": "section-two",
+      "title": "مجاهدة النفس والزهد والخطب",
+      "pages": [
+        124,
+        132
+      ],
+      "accent": "emerald"
+    },
+    {
+      "id": "s2-tribes-and-counsel",
+      "sectionId": "section-two",
+      "title": "القبائل والصلح والمجالس",
+      "pages": [
+        133,
+        145
+      ],
+      "accent": "blue"
+    },
+    {
+      "id": "s2-poetry-and-critique",
+      "sectionId": "section-two",
+      "title": "المدح ونقد الشعر والرواية",
+      "pages": [
+        146,
+        166
+      ],
+      "accent": "violet"
+    },
+    {
+      "id": "s2-proverbs-and-elegy",
+      "sectionId": "section-two",
+      "title": "الأمثال والعتاب والرثاء",
+      "pages": [
+        167,
+        189
+      ],
+      "accent": "rose"
+    },
+    {
+      "id": "s2-ethics-and-farewell",
+      "sectionId": "section-two",
+      "title": "البر والآداب والهجاء والرثاء",
+      "pages": [
+        190,
+        206
+      ],
+      "accent": "amber"
+    },
+    {
+      "id": "s3-elegy-pride-consultation",
+      "sectionId": "section-three",
+      "title": "الرثاء والفخر والمشاورات",
+      "pages": [
+        207,
+        223
+      ],
+      "accent": "red"
+    },
+    {
+      "id": "s3-love-and-wit",
+      "sectionId": "section-three",
+      "title": "النسيب والملح والأخبار",
+      "pages": [
+        224,
+        237
+      ],
+      "accent": "gold"
+    },
+    {
+      "id": "s3-sermons-and-hajjaj",
+      "sectionId": "section-three",
+      "title": "الخطب وبلاغة الأخبار والحجاج",
+      "pages": [
+        238,
+        246
+      ],
+      "accent": "emerald"
+    },
+    {
+      "id": "s3-courage-wealth-prison",
+      "sectionId": "section-three",
+      "title": "الشجاعة والفقر والسجن",
+      "pages": [
+        247,
+        257
+      ],
+      "accent": "blue"
+    },
+    {
+      "id": "s3-letters-patience-poetry",
+      "sectionId": "section-three",
+      "title": "الرسائل والصبر وشواهد الشعر",
+      "pages": [
+        258,
+        273
+      ],
+      "accent": "violet"
+    },
+    {
+      "id": "s3-stories-and-wisdom",
+      "sectionId": "section-three",
+      "title": "الأخبار والحكمة والرواية",
+      "pages": [
+        274,
+        284
+      ],
+      "accent": "rose"
+    },
+    {
+      "id": "s3-poetry-and-generosity",
+      "sectionId": "section-three",
+      "title": "الشعر والجود والحث عليه",
+      "pages": [
+        285,
+        297
+      ],
+      "accent": "amber"
+    },
+    {
+      "id": "s3-sermons-and-accounts",
+      "sectionId": "section-three",
+      "title": "الخطب والآثار والجواب",
+      "pages": [
+        298,
+        306
+      ],
+      "accent": "red"
+    },
+    {
+      "id": "s4-selected-poetry-and-praise",
+      "sectionId": "section-four",
+      "title": "الأبيات المنفردة والمدح",
+      "pages": [
+        3,
+        17
+      ],
+      "accent": "red"
+    },
+    {
+      "id": "s4-ibn-abi-uyayna",
+      "sectionId": "section-four",
+      "title": "قصائد ابن أبي عيينة",
+      "pages": [
+        18,
+        32
+      ],
+      "accent": "gold"
+    },
+    {
+      "id": "s4-wisdom-and-stories",
+      "sectionId": "section-four",
+      "title": "الحِكَم والأخبار وشعر ذي الرمة",
+      "pages": [
+        33,
+        45
+      ],
+      "accent": "emerald"
+    },
+    {
+      "id": "s4-satire-elegy-and-tribes",
+      "sectionId": "section-four",
+      "title": "الهجاء والرثاء وأخبار القبائل",
+      "pages": [
+        46,
+        64
+      ],
+      "accent": "blue"
+    },
+    {
+      "id": "s4-delegations-and-accounts",
+      "sectionId": "section-four",
+      "title": "الوفود وأخبار العرب",
+      "pages": [
+        65,
+        71
+      ],
+      "accent": "violet"
+    },
+    {
+      "id": "s4-governors-and-letters",
+      "sectionId": "section-four",
+      "title": "الحجاج والولاة والرسائل",
+      "pages": [
+        72,
+        89
+      ],
+      "accent": "rose"
+    },
+    {
+      "id": "s4-notables-and-correspondence",
+      "sectionId": "section-four",
+      "title": "النجباء والرسائل",
+      "pages": [
+        90,
+        94
+      ],
+      "accent": "amber"
+    },
+    {
+      "id": "s4-description-and-kinaya",
+      "sectionId": "section-four",
+      "title": "الوصف والكنايات والمدح",
+      "pages": [
+        95,
+        102
+      ],
+      "accent": "red"
+    },
+    {
+      "id": "s5-praise-criticism-and-courts",
+      "sectionId": "section-five",
+      "title": "المدح ونقد الشعر وأخبار البلاط",
+      "pages": [
+        103,
+        122
+      ],
+      "accent": "red"
+    },
+    {
+      "id": "s5-wisdom-and-selected-poetry",
+      "sectionId": "section-five",
+      "title": "الحِكَم والأخبار والأشعار المختارة",
+      "pages": [
+        123,
+        132
+      ],
+      "accent": "gold"
+    },
+    {
+      "id": "s5-satire-and-tribal-accounts",
+      "sectionId": "section-five",
+      "title": "الهجاء وأخبار القبائل",
+      "pages": [
+        133,
+        146
+      ],
+      "accent": "emerald"
+    },
+    {
+      "id": "s5-arab-tales-and-language",
+      "sectionId": "section-five",
+      "title": "أخبار العرب ومسائل اللغة",
+      "pages": [
+        147,
+        161
+      ],
+      "accent": "blue"
+    },
+    {
+      "id": "s5-eloquence-and-biographical-news",
+      "sectionId": "section-five",
+      "title": "الفصاحة والأخبار المختارة",
+      "pages": [
+        162,
+        169
+      ],
+      "accent": "violet"
+    },
+    {
+      "id": "s5-umar-ibn-abi-rabia",
+      "sectionId": "section-five",
+      "title": "شعر عمر بن أبي ربيعة وأخباره",
+      "pages": [
+        170,
+        186
+      ],
+      "accent": "rose"
+    },
+    {
+      "id": "s5-singing-and-literary-accounts",
+      "sectionId": "section-five",
+      "title": "الغناء والأخبار الأدبية",
+      "pages": [
+        187,
+        200
+      ],
+      "accent": "amber"
+    },
+    {
+      "id": "s5-jarir-and-umar",
+      "sectionId": "section-five",
+      "title": "جرير وعمر بن عبد العزيز",
+      "pages": [
+        201,
+        202
+      ],
+      "accent": "red"
+    },
+    {
+      "id": "s6-jarir-and-umar",
+      "sectionId": "section-six",
+      "title": "شعر جرير وعمر بن عبد العزيز",
+      "pages": [
+        203,
+        210
+      ],
+      "range": "ج 2، ص 203–210",
+      "accent": "red"
+    },
+    {
+      "id": "s6-wisdom-camels-and-language",
+      "sectionId": "section-six",
+      "title": "الحِكَم ووصف الإبل وضروب الكلام",
+      "pages": [
+        211,
+        218
+      ],
+      "range": "ج 2، ص 211–218",
+      "accent": "gold"
+    },
+    {
+      "id": "s6-literary-news-and-lovers",
+      "sectionId": "section-six",
+      "title": "أخبار الأدباء وطرائف العشاق",
+      "pages": [
+        218,
+        226
+      ],
+      "range": "ج 2، ص 218–226",
+      "accent": "emerald"
+    },
+    {
+      "id": "s6-secrets-and-keeping",
+      "sectionId": "section-six",
+      "title": "السرّ وكتمانه",
+      "pages": [
+        226,
+        233
+      ],
+      "range": "ج 2، ص 226–233",
+      "accent": "blue"
+    },
+    {
+      "id": "s6-third-volume-poetry-and-news",
+      "sectionId": "section-six",
+      "title": "بدء المجلد الثالث: الشعر والأخبار",
+      "pages": [
+        3,
+        24
+      ],
+      "range": "ج 3، ص 3–24",
+      "accent": "violet"
+    },
+    {
+      "id": "s6-simile-and-examples",
+      "sectionId": "section-six",
+      "title": "التشبيه ونماذجه",
+      "pages": [
+        25,
+        44
+      ],
+      "range": "ج 3، ص 25–44",
+      "accent": "rose"
+    },
+    {
+      "id": "s6-winds-poetry-and-language",
+      "sectionId": "section-six",
+      "title": "الرياح والشعر ومسائل اللغة",
+      "pages": [
+        44,
+        59
+      ],
+      "range": "ج 3، ص 44–59",
+      "accent": "amber"
+    },
+    {
+      "id": "s6-wisdom-and-al-farazdaq",
+      "sectionId": "section-six",
+      "title": "أخبار ذوي الحِلم والفرزدق",
+      "pages": [
+        59,
+        71
+      ],
+      "range": "ج 3، ص 59–71",
+      "accent": "red"
+    },
+    {
+      "id": "s7-abu-al-najm-and-simile",
+      "sectionId": "section-seven",
+      "title": "أبو النجم وطرائف التشبيه",
+      "pages": [
+        72,
+        99
+      ],
+      "range": "ج 3، ص 72–99",
+      "accent": "red"
+    },
+    {
+      "id": "s7-modern-similes",
+      "sectionId": "section-seven",
+      "title": "طرائف من تشبيهات المحدثين",
+      "pages": [
+        100,
+        114
+      ],
+      "range": "ج 3، ص 100–114",
+      "accent": "gold"
+    },
+    {
+      "id": "s7-fine-speech-and-wisdom",
+      "sectionId": "section-seven",
+      "title": "حسن الكلام والحِكَم والشعر",
+      "pages": [
+        115,
+        120
+      ],
+      "range": "ج 3، ص 115–120",
+      "accent": "emerald"
+    },
+    {
+      "id": "s7-kharijites-and-dialogues",
+      "sectionId": "section-seven",
+      "title": "أخبار الخوارج والمناظرات الأولى",
+      "pages": [
+        121,
+        133
+      ],
+      "range": "ج 3، ص 121–133",
+      "accent": "blue"
+    },
+    {
+      "id": "s7-kharijites-and-ali",
+      "sectionId": "section-seven",
+      "title": "الخوارج وعليّ بن أبي طالب",
+      "pages": [
+        134,
+        143
+      ],
+      "range": "ج 3، ص 134–143",
+      "accent": "violet"
+    },
+    {
+      "id": "s7-elegies-and-correspondence",
+      "sectionId": "section-seven",
+      "title": "رثاء علي وآل البيت والرسائل",
+      "pages": [
+        144,
+        156
+      ],
+      "range": "ج 3، ص 144–156",
+      "accent": "rose"
+    },
+    {
+      "id": "s7-kharijites-and-jurists",
+      "sectionId": "section-seven",
+      "title": "أخبار الخوارج وآراء الفقهاء",
+      "pages": [
+        156,
+        164
+      ],
+      "range": "ج 3، ص 156–164",
+      "accent": "amber"
+    },
+    {
+      "id": "s7-nafi-and-delegations",
+      "sectionId": "section-seven",
+      "title": "نافع بن الأزرق والوفود",
+      "pages": [
+        165,
+        171
+      ],
+      "range": "ج 3، ص 165–171",
+      "accent": "red"
+    },
+    {
+      "id": "s8-early-kharijite-narratives",
+      "sectionId": "section-eight",
+      "title": "أخبار الخوارج والوقائع الأولى",
+      "pages": [
+        172,
+        182
+      ],
+      "range": "ج 3، ص 172–182",
+      "accent": "red"
+    },
+    {
+      "id": "s8-abu-bilal-and-urwa",
+      "sectionId": "section-eight",
+      "title": "أبو بلال وعروة وأخبار زياد",
+      "pages": [
+        183,
+        193
+      ],
+      "range": "ج 3، ص 183–193",
+      "accent": "gold"
+    },
+    {
+      "id": "s8-mukhtar-and-lam",
+      "sectionId": "section-eight",
+      "title": "المختار بن عبيد وباب اللام",
+      "pages": [
+        193,
+        198
+      ],
+      "range": "ج 3، ص 193–198",
+      "accent": "emerald"
+    },
+    {
+      "id": "s8-kharijites-and-zubayr",
+      "sectionId": "section-eight",
+      "title": "الخوارج وابن الزبير",
+      "pages": [
+        199,
+        205
+      ],
+      "range": "ج 3، ص 199–205",
+      "accent": "blue"
+    },
+    {
+      "id": "s8-nafi-and-najda",
+      "sectionId": "section-eight",
+      "title": "نافع بن الأزرق ونجدة والرسائل",
+      "pages": [
+        206,
+        212
+      ],
+      "range": "ج 3، ص 206–212",
+      "accent": "violet"
+    },
+    {
+      "id": "s8-nafi-battles-and-grammar",
+      "sectionId": "section-eight",
+      "title": "مقتل نافع ومسائل اللغة",
+      "pages": [
+        213,
+        220
+      ],
+      "range": "ج 3، ص 213–220",
+      "accent": "rose"
+    },
+    {
+      "id": "s8-azariqa-and-muhallab",
+      "sectionId": "section-eight",
+      "title": "الأزارقة والمهلب: البدايات",
+      "pages": [
+        221,
+        239
+      ],
+      "range": "ج 3، ص 221–239",
+      "accent": "amber"
+    },
+    {
+      "id": "s8-muhallab-qutri-and-hajjaj",
+      "sectionId": "section-eight",
+      "title": "المهلب وقطري والحجاج",
+      "pages": [
+        240,
+        271
+      ],
+      "range": "ج 3، ص 240–271",
+      "accent": "red"
+    },
+    {
+      "id": "s9-hajjaj-muhallab",
+      "sectionId": "section-nine",
+      "title": "ولاية الحجاج وأمره مع المهلب والخوارج",
+      "pages": [
+        272,
+        293
+      ],
+      "range": "ج 3، ص 272–293",
+      "accent": "red"
+    },
+    {
+      "id": "s9-abu-talib-and-nabigha",
+      "sectionId": "section-nine",
+      "title": "خطبة أبي طالب ووفود النابغة",
+      "pages": [
+        3,
+        6
+      ],
+      "range": "ج 4، ص 3–6",
+      "accent": "gold"
+    },
+    {
+      "id": "s9-umayyad-incitement",
+      "sectionId": "section-nine",
+      "title": "تحريض سديف وشبل على بني أمية",
+      "pages": [
+        7,
+        11
+      ],
+      "range": "ج 4، ص 7–11",
+      "accent": "emerald"
+    },
+    {
+      "id": "s9-mawali",
+      "sectionId": "section-nine",
+      "title": "من أخبار الموالي",
+      "pages": [
+        11,
+        14
+      ],
+      "range": "ج 4، ص 11–14",
+      "accent": "blue"
+    },
+    {
+      "id": "s9-elegies-family",
+      "sectionId": "section-nine",
+      "title": "مراثي الآباء والإخوة والأبناء",
+      "pages": [
+        14,
+        23
+      ],
+      "range": "ج 4، ص 14–23",
+      "accent": "violet"
+    },
+    {
+      "id": "s9-elegies-poets",
+      "sectionId": "section-nine",
+      "title": "مراثي الشعراء والرجال",
+      "pages": [
+        24,
+        32
+      ],
+      "range": "ج 4، ص 24–32",
+      "accent": "rose"
+    },
+    {
+      "id": "s9-layla-and-khansa",
+      "sectionId": "section-nine",
+      "title": "مراثي ليلى الأخيلية والخنساء",
+      "pages": [
+        32,
+        51
+      ],
+      "range": "ج 4، ص 32–51",
+      "accent": "amber"
+    },
+    {
+      "id": "s9-ibn-manadhir",
+      "sectionId": "section-nine",
+      "title": "مراثي ابن مناذر وأعشى باهلة",
+      "pages": [
+        52,
+        61
+      ],
+      "range": "ج 4، ص 52–61",
+      "accent": "red"
+    },
+    {
+      "id": "s9-matim-and-grief",
+      "sectionId": "section-nine",
+      "title": "مراثي متمم وأخبار الجزع عند الموت",
+      "pages": [
+        61,
+        75
+      ],
+      "range": "ج 4، ص 61–75",
+      "accent": "gold"
+    },
+    {
+      "id": "s9-modern-elegies",
+      "sectionId": "section-nine",
+      "title": "أخبار الوقوف على القبور ومراثي المحدثين",
+      "pages": [
+        75,
+        80
+      ],
+      "range": "ج 4، ص 75–80",
+      "accent": "emerald"
+    },
+    {
+      "id": "s10-yacoub-yazid",
+      "sectionId": "section-ten",
+      "title": "مراثي يعقوب بن الربيع ويزيد المهلبي",
+      "pages": [
+        81,
+        83
+      ],
+      "range": "ج 4، ص 81–83",
+      "accent": "red"
+    },
+    {
+      "id": "s10-yemeni-kings",
+      "sectionId": "section-ten",
+      "title": "الأذواء من اليمن في الإسلام",
+      "pages": [
+        84,
+        87
+      ],
+      "range": "ج 4، ص 84–87",
+      "accent": "gold"
+    },
+    {
+      "id": "s10-definition-and-sermons",
+      "sectionId": "section-ten",
+      "title": "التعريف والتنكير وخطب مختارة",
+      "pages": [
+        88,
+        92
+      ],
+      "range": "ج 4، ص 88–92",
+      "accent": "emerald"
+    },
+    {
+      "id": "s10-muawiya-and-food",
+      "sectionId": "section-ten",
+      "title": "خبر معاوية وحديث خالد بن صفوان",
+      "pages": [
+        92,
+        94
+      ],
+      "range": "ج 4، ص 92–94",
+      "accent": "blue"
+    },
+    {
+      "id": "s10-mansur-letters",
+      "sectionId": "section-ten",
+      "title": "رسائل المنصور ومحمد بن عبد الله",
+      "pages": [
+        94,
+        99
+      ],
+      "range": "ج 4، ص 94–99",
+      "accent": "violet"
+    },
+    {
+      "id": "s10-hisham-letter",
+      "sectionId": "section-ten",
+      "title": "رسالة هشام إلى خالد القسري",
+      "pages": [
+        99,
+        102
+      ],
+      "range": "ج 4، ص 99–102",
+      "accent": "rose"
+    },
+    {
+      "id": "s10-poetry-and-majaz",
+      "sectionId": "section-ten",
+      "title": "مختارات الشعر والمجاز في القرآن",
+      "pages": [
+        103,
+        105
+      ],
+      "range": "ج 4، ص 103–105",
+      "accent": "amber"
+    }
+  ],
+  "stats": {
+    "sourceUnits": 1284,
+    "printedPages": 925,
+    "branchCount": 79
+  },
+  "sectionDataUrls": {
+    "section-one": "/manus-storage/al-kamil-section-one_5c051567.json",
+    "section-two": "/manus-storage/al-kamil-section-two_76d3800d.json",
+    "section-three": "/manus-storage/al-kamil-section-three_56ccbd5b.json",
+    "section-four": "/manus-storage/al-kamil-section-four_25a622e9.json",
+    "section-five": "/manus-storage/al-kamil-section-five_887c9ceb.json",
+    "section-six": "/manus-storage/al-kamil-section-six_772869df.json",
+    "section-seven": "/manus-storage/al-kamil-section-seven_f8b2493e.json",
+    "section-eight": "/manus-storage/al-kamil-section-eight_f3e92d96.json",
+    "section-nine": "/manus-storage/al-kamil-section-nine_aeebfedd.json",
+    "section-ten": "/manus-storage/al-kamil-section-ten_ce43e68e.json"
+  }
+}

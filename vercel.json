@@ -1,0 +1,194 @@
+{
+  "rewrites": [
+    {
+      "source": "/stories.html",
+      "destination": "/stories/index.html"
+    },
+    {
+      "source": "/stories",
+      "destination": "/stories/index.html"
+    },
+    {
+      "source": "/B1_level3",
+      "destination": "/B1_level3/index.html"
+    },
+    {
+      "source": "/grammar-level6",
+      "destination": "/grammar-level6/index.html"
+    },
+    {
+      "source": "/read",
+      "destination": "/read/index.html"
+    },
+    {
+      "source": "/read/",
+      "destination": "/read/index.html"
+    },
+    {
+      "source": "/arabic-academy",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/404",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/arab-world",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/curriculum",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/curriculum/:path*",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/curriculum/:levelId",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/curriculum/:levelId/:chapterId",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/curriculum/:levelId/:chapterId/:topicIndex",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/curriculum/:levelId/:chapterId/practice",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/curriculum/:levelId/lesson/:lessonId",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/english",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/guide/correct-language",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/guide/interactive-passages",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/guide/sentence-parsing",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/guide/sentence-parsing/:path*",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/guide/sentence-parsing/:levelId",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/guide/sentence-parsing/:levelId/group/:groupId",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/lesson/:unitId",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/mubarrad",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/mubarrad/:sectionId",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/poetry-wisdom",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/quiz",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/quiz/comprehensive",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/quran-akhlak",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/quran-akhlak/:categoryId",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/quran-ghareeb",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/quran-ghareeb/favorites",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/quran-ghareeb/:groupId",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/rhetoric",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/rhetoric/applications",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/rhetoric/:categoryId",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/rhetoric/:categoryId/lesson/:lessonId",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/rhetoric/:categoryId/branch/:branchId",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/rhetoric/:categoryId/branch/:branchId/lesson/:lessonId",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/rhetoric/applications/branch/quran-context-clarifications",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/rhetoric/applications/branch/quran-context-clarifications/lesson/:lessonId",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/rhetoric/applications/branch/quran-rhetoric",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/rhetoric/applications/branch/quran-rhetoric/lesson/:lessonId",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/rhetoric/qusai-poems",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/rhetoric/qusai-poems/:pieceId",
+      "destination": "/arabic-academy/index.html"
+    },
+    {
+      "source": "/arabic-academy/search",
+      "destination": "/arabic-academy/index.html"
+    }
+  ],
+  "buildCommand": "node src/build.js",
+  "outputDirectory": "public"
+}

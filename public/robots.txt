@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Content-Signal: search=yes
+
+Sitemap: https://english-teacher-vercel.vercel.app/sitemap.xml
