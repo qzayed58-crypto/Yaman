@@ -4,6 +4,7 @@
   var regPromise = null;
   var lastCheck = 0;
   var refreshing = false;
+  var cueHadControllerAtStart = hasSW && !!navigator.serviceWorker.controller;
 
   function registerAndUpdate() {
     if (!hasSW) return Promise.resolve(null);
@@ -57,9 +58,18 @@
     if (media.some(function (item) { return !item.paused && !item.ended; })) return false;
     return true;
   }
+  function cueHandleControllerChange() {
+    if (!cueHadControllerAtStart) {
+      cueHadControllerAtStart = true;
+      return;
+    }
+    cueDeferredRefresh = true;
+    if (cueSafeToRefresh()) setRefreshing(true, true);
+  }
+  if (hasSW) navigator.serviceWorker.addEventListener('controllerchange', cueHandleControllerChange);
   function cueHandleResume() {
-    /* CUE_RESUME_WITHOUT_RELOAD_V1: check for updates without discarding the current view. */
-    cueDeferredRefresh = false; checkUpdate(true);
+    if (cueDeferredRefresh && cueSafeToRefresh()) { setRefreshing(true, true); return; }
+    checkUpdate(true);
   }
   document.addEventListener('click', function () {
     if (!cueDeferredRefresh) return;

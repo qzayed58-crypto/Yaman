@@ -1,4 +1,4 @@
-const CACHE = 'english-teacher-vercel-independent-v3';
+const CACHE = 'english-teacher-vercel-independent-v4';
 const SHELL = [
   '/',
   '/stories/',
