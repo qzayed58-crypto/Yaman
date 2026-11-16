@@ -117,6 +117,27 @@ test("rewrites preserve the original query string", async () => {
   assert.equal(forwardedRequest.url, "https://example.test/read/index.html?level=1&from=home");
 });
 
+test("HTML asset responses receive UTF-8 content type without changing their content", async () => {
+  const body = "<title>مرحبا</title>";
+  const request = new Request("https://example.test/");
+
+  for (const assetContentType of ["text/html", "text/html; charset=windows-1252"]) {
+    const response = await worker.fetch(request, {
+      ASSETS: {
+        fetch: async () => new Response(body, {
+          status: 201,
+          headers: { "content-type": assetContentType, "x-test": "preserved" },
+        }),
+      },
+    });
+
+    assert.equal(response.status, 201);
+    assert.equal(response.headers.get("content-type"), "text/html; charset=UTF-8");
+    assert.equal(response.headers.get("x-test"), "preserved");
+    assert.equal(await response.text(), body);
+  }
+});
+
 test("unmatched asset requests are passed to Cloudflare static assets unchanged", async () => {
   const request = new Request("https://example.test/robots.txt");
   let forwardedRequest;

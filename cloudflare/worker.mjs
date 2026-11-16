@@ -32,15 +32,31 @@ export function resolveRewrite(pathname) {
   return null;
 }
 
+async function fetchAsset(request, env) {
+  const response = await env.ASSETS.fetch(request);
+  const contentType = response.headers.get("content-type") || "";
+  if (!/^text\/html(?:\s*;|$)/i.test(contentType) || /\bcharset\s*=\s*utf-?8\b/i.test(contentType)) {
+    return response;
+  }
+
+  const headers = new Headers(response.headers);
+  headers.set("content-type", "text/html; charset=UTF-8");
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const destination = resolveRewrite(url.pathname);
 
-    if (!destination) return env.ASSETS.fetch(request);
+    if (!destination) return fetchAsset(request, env);
 
     const rewrittenUrl = new URL(destination, url.origin);
     rewrittenUrl.search = url.search;
-    return env.ASSETS.fetch(new Request(rewrittenUrl, request));
+    return fetchAsset(new Request(rewrittenUrl, request), env);
   },
 };
