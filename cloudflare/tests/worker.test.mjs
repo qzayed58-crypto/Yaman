@@ -71,6 +71,36 @@ test("conversation data satisfies the runtime integrity checks", async () => {
   }
 });
 
+test("every production HTML page declares UTF-8 within the first 1024 bytes", async () => {
+  const { open, readdir } = await import("node:fs/promises");
+  const root = new URL("../../public/", import.meta.url);
+  const htmlFiles = [];
+
+  async function collect(directory) {
+    for (const entry of await readdir(directory, { withFileTypes: true })) {
+      const file = new URL(`${entry.name}${entry.isDirectory() ? "/" : ""}`, directory);
+      if (entry.isDirectory()) await collect(file);
+      else if (entry.isFile() && entry.name.endsWith(".html")) htmlFiles.push(file);
+    }
+  }
+
+  await collect(root);
+  assert.ok(htmlFiles.length > 0, "production HTML pages exist");
+
+  for (const file of htmlFiles) {
+    const handle = await open(file, "r");
+    const buffer = Buffer.alloc(1024);
+    let bytesRead;
+    try {
+      ({ bytesRead } = await handle.read(buffer, 0, buffer.length, 0));
+    } finally {
+      await handle.close();
+    }
+    const prefix = buffer.subarray(0, bytesRead).toString("ascii");
+    assert.match(prefix, /<meta\s+charset=["']?utf-8["']?\s*\/?>/i, `${file.pathname} must declare UTF-8 early`);
+  }
+});
+
 test("rewrites preserve the original query string", async () => {
   let forwardedRequest;
   const request = new Request("https://example.test/read?level=1&from=home");
