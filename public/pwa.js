@@ -361,13 +361,19 @@
     pane.className = 'pane';
     pane.hidden = true;
     pane.setAttribute('aria-label', 'Read');
-    pane.style.cssText = 'background:#050814;min-height:calc(100vh - var(--tabh, 4.6rem));';
+    pane.style.cssText = 'position:fixed;inset:0 0 var(--tabh, 4.6rem) 0;min-height:0;z-index:5;background:#050814;overflow:hidden;';
+
+    function fitPane() {
+      pane.style.bottom = (bar.hidden ? 0 : bar.getBoundingClientRect().height) + 'px';
+    }
+    if (typeof ResizeObserver === 'function') new ResizeObserver(fitPane).observe(bar);
+    else window.addEventListener('resize', fitPane);
 
     var frame = document.createElement('iframe');
     frame.title = 'Read — CyberFlow English Reading Game';
     frame.setAttribute('allow', 'autoplay');
     frame.setAttribute('loading', 'lazy');
-    frame.style.cssText = 'display:block;width:100%;height:calc(100dvh - var(--tabh, 4.6rem));min-height:520px;border:0;background:#050814;';
+    frame.style.cssText = 'display:block;width:100%;height:100%;min-height:0;border:0;background:#050814;';
     var gameLoaded = false;
     function loadGame() {
       if (gameLoaded) return;
@@ -399,6 +405,7 @@
       if (target === button) {
         loadGame();
         pane.hidden = false;
+        fitPane();
       } else {
         pane.hidden = true;
       }
