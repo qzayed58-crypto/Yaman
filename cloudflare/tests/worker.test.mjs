@@ -138,6 +138,21 @@ test("HTML asset responses receive UTF-8 content type without changing their con
   }
 });
 
+test("Arabic homepage uses the bundled shaping font independently of browser or system fallback", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const html = await readFile(new URL("../../public/index.html", import.meta.url), "utf8");
+  const fontsCss = await readFile(new URL("../../public/assets/fonts-main.css", import.meta.url), "utf8");
+  const homeStyle = html.match(/<style id="cue-reference-home-style-v1">([\s\S]*?)<\/style>/)?.[1];
+  assert.match(html, /<html lang="ar" dir="rtl"/);
+  assert.match(html, /<link rel="stylesheet" href="\/assets\/fonts-main\.css">/);
+  assert.doesNotMatch(html, /CueHomeReadex/);
+  assert.doesNotMatch(html, /<link href="https:\/\/fonts\.googleapis\.com\/css2\?family=Inter:/);
+  assert.ok(homeStyle, "homepage style exists");
+  assert.match(homeStyle, /#cue-home-shell\{[^}]*font-family:'Noto Sans Arabic'/);
+  assert.match(fontsCss, /font-family: 'Noto Sans Arabic'/);
+  assert.match(fontsCss, /url\(\/s\/notosansarabic\/[^)]+\.ttf\)/);
+});
+
 test("unmatched asset requests are passed to Cloudflare static assets unchanged", async () => {
   const request = new Request("https://example.test/robots.txt");
   let forwardedRequest;
